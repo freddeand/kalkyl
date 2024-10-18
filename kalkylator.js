@@ -1,3 +1,5 @@
+function enkelKalkylator() {
+
 // Tar emot användaren tal
 let numbOne = Number(
   prompt(
@@ -50,3 +52,6 @@ if (isNaN(numbOne) || isNaN(numbTwo)) {
       alert("Felaktig operatör!");
       break;
   }
+
+
+}
