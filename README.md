@@ -1,9 +1,9 @@
-# Boiler Room v.42
-https://docs.google.com/document/d/1nWGb1GsHaGTtiEeP96TGx2LF5fABqvF3/edit
+# Boiler Room v.43
 
-# Trello:
-https://trello.com/b/olL39dc6/projekt-js
+https://docs.google.com/document/d/15-f3EzBXyrV15ltld81Kz4MzniQAr8L_/edit?usp=sharing&ouid=117483308456376283499&rtpof=true&sd=true
+
+# Trello v43:
+
+https://trello.com/b/VtZJg7yw/boiler-room-v43
 
 # Dokumentation:
-https://docs.google.com/document/d/19vOcWChXlvV_JNGFFbYS32VJP5xg2ycrUdxM6Gy-gmo/edit?tab=t.0
-
