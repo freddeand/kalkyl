@@ -1,6 +1,7 @@
 function startLoop() {
-  const menuText = "Välj ett av dessa alternativ: \n1: Starta Kalkylatorn \n2: Kolla på youtube \n3: Avsluta";
-  const errorText = "Du skrev fel. Det måste vara en siffra mellan 1 och 3."
+  const menuText =
+    "Välj ett av dessa alternativ: \n1: Starta Kalkylatorn \n2: Kolla på youtube \n3: Avsluta";
+  const errorText = "Du skrev fel. Det måste vara en siffra mellan 1 och 3.";
   let promptText = menuText;
   do {
     choice = Number(prompt(promptText));
@@ -8,15 +9,13 @@ function startLoop() {
     choice === 1
       ? advanceCalculator()
       : choice === 2
-        ? goToYouTube()
-        : choice === 0
-          ? choice = 3
-          : promptText = errorText.toUpperCase() + "\n\n" + menuText; console.log("ERROR: Du måste skriva in ett tal mellan 1-3")
-          ;
-          
-          
+      ? goToYouTube()
+      : choice === 0
+      ? (choice = 3)
+      : (promptText = errorText.toUpperCase() + "\n\n" + menuText);
+    console.log("ERROR: Du måste skriva in ett tal mellan 1-3");
+
     console.log(choice);
-          
   } while (choice !== 3);
 }
 // Sends user to youtube to learn about basic math.
@@ -37,7 +36,7 @@ function advanceCalculator() {
         "Hej och välkommen till kalkylatorn: Skriv in önskat tal för att utföra en uträkning."
       )
     );
-    if (numbOne === NaN){
+    if (isNaN(numbOne)) {
       return;
     }
     let value = prompt(
@@ -47,10 +46,10 @@ function advanceCalculator() {
       return;
     }
     let numbTwo = parseFloat(prompt("Skriv in ett till."));
-    if (numbTwo === NaN){
+    if (isNaN(numbTwo)) {
       return;
     }
-    
+
     let symbol;
     let result;
     let validResult = true;
@@ -137,17 +136,17 @@ function advanceCalculator() {
       // isRunning = false;
       let userContinue = prompt(
         "Tidigare beräkningar\n" +
-        historyTwo +
-        "\nVill du forsätta? skriv in ja eller nej"
+          historyTwo +
+          "\nVill du forsätta? skriv in ja eller nej"
       );
 
       if (userContinue.toLowerCase() === "ja") {
         advanceCalculator();
-      } else if (userContinue === null) {
+      } else if (userContinue === null || userContinue === "nej") {
         // return;
         isRunning = false;
       } else {
-        alert("Du måste skriva in ja eller nej.")
+        alert("Du måste skriva in ja eller nej.");
         console.log("Du måste skriva in ja eller nej.");
       }
     }
