@@ -5,7 +5,7 @@ function startLoop() {
   let promptText = menuText;
   do {
     choice = Number(prompt(promptText));
-
+    // if choice = 0 then user clicked cancel on prompt. because Number changes the null - value to 0.
     choice === 1
       ? advanceCalculator()
       : choice === 2
@@ -49,7 +49,7 @@ function advanceCalculator() {
     if (isNaN(numbTwo)) {
       return;
     }
-
+    // Moa
     let symbol;
     let result;
     let validResult = true;
@@ -104,7 +104,7 @@ function advanceCalculator() {
           validResult = false;
           break;
       }
-
+    // Benjamin
     if (validResult) {
       // Kollar om resultatet är utan decimaler, avrundar annars till 2 decimaler.
       let resultNoDec = parseFloat(result.toFixed(0));
