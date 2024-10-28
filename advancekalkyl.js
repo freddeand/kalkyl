@@ -106,10 +106,10 @@ function advanceCalculator() {
       }
     // Benjamin
     if (validResult) {
-      // Kollar om resultatet är utan decimaler, avrundar annars till 2 decimaler.
+      // Checks if the result is without decimals, else it round it up to 2 decimals.
       let resultNoDec = parseFloat(result.toFixed(0));
       if (result === resultNoDec) {
-        // Är redan heltal avrunda inte till två decimaler.
+        // If its a whole number don't show 2 decimals.
       } else {
         result = result.toFixed(2);
       }
