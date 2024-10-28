@@ -134,21 +134,27 @@ function advanceCalculator() {
       // }
 
       // isRunning = false;
-      let userContinue = prompt(
-        "Tidigare beräkningar\n" +
-          historyTwo +
-          "\nVill du forsätta? skriv in ja eller nej"
-      );
+      let userContinue;
+      do {
+        userContinue = prompt(
+          "Tidigare beräkningar\n" +
+            historyTwo +
+            "\nVill du forsätta? skriv in ja eller nej"
+        );
 
-      if (userContinue.toLowerCase() === "ja") {
-        advanceCalculator();
-      } else if (userContinue === null || userContinue === "nej") {
-        // return;
-        isRunning = false;
-      } else {
-        alert("Du måste skriva in ja eller nej.");
-        console.log("Du måste skriva in ja eller nej.");
-      }
+        if (userContinue === null || userContinue === "nej") {
+          isRunning = false;
+        } else if (userContinue.toLowerCase() === "ja") {
+          advanceCalculator();
+        } else {
+          alert("Du måste skriva in ja eller nej.");
+          console.log("Du måste skriva in ja eller nej.");
+        }
+      } while (
+        userContinue != "ja" &&
+        userContinue != "nej" &&
+        userContinue != null
+      );
     }
   }
 }
